@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="search">
+          <input type="text" class="inpSearch">
+          <div class="placeOfRec"></div>
+        </div>
+        <div class="bookzone">
+          <div id="flipbook">
+            <div class="page first-page"></div>
+            <div class="page">
+              <p>book</p>
+            </div>
+            <div class="page">
+              <p>book</p>
+            </div>
+            <div class="page">
+              <p>book</p>
+            </div>
+            <div class="page">
+              <p>book</p>
+            </div>
+            <div class="page">
+              <p>book</p>
+            </div>
+            <div class="page"></div>
+            <div class="page last-page"></div>
+          </div>
+        </div>
+    </div>
+        
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.topology.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="turnjs4/lib/turn.js"></script>
+<script>
+VANTA.TOPOLOGY({
+  el: ".wrapper",
+  mouseControls: false,
+  touchControls: false,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00,
+  color: 0xb67c3f,
+  backgroundColor:0x4d1900
+});
+
+let widthL = +window.getComputedStyle(document.querySelector('.bookzone')).width.slice(0, -2) * 0.7 ;
+  let heightL = +window.getComputedStyle(document.querySelector('.bookzone')).height.slice(0, -2) * 0.85;
+  $("#flipbook").turn({
+    width: widthL,
+    height: heightL,
+    autoCenter: true
+  });
+</script>
+
+</body>
+</html>
