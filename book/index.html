@@ -8,63 +8,129 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="wrapper">
-        <div class="search">
-          <input type="text" class="inpSearch">
-          <div class="placeOfRec"></div>
-        </div>
-        <div class="bookzone">
-          <div id="flipbook">
-            <div class="page first-page"></div>
-            <div class="page">
-              <p>book</p>
+  
+    
+      
+       <div class="wrapper">
+        <div class="searchzone">
+          <div class="search">
+            <input type="text" class="inpSearch" placeholder="Найди любимое блюдо">
+            <div class="placeOfRec">
+              <div class="searchBtn">
+                <p>Поиск</p>
+              </div>
+              <div class="recepts"></div>
             </div>
-            <div class="page">
-              <p>book</p>
-            </div>
-            <div class="page">
-              <p>book</p>
-            </div>
-            <div class="page">
-              <p>book</p>
-            </div>
-            <div class="page">
-              <p>book</p>
-            </div>
-            <div class="page"></div>
-            <div class="page last-page"></div>
           </div>
-        </div>
-    </div>
         
-    </div>
+          </div>
+          <div class="bookzone">
+
+            <div id="flipbook">
+              <div class="page first-page hard">
+                
+              </div>
+              <div class="page hard">
+                <h2>Огурец</h2>
+                <div class="blockW">
+                  <div class="img"></div>
+                  <div class="ing">
+                    <p>
+                      jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjf hello i am pidor obosanyu
+                    </p>
+                  </div>
+                </div>
+                <div class="op">
+                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor numquam eum libero natus qui porro consequuntur quo autem explicabo aspernatur quisquam, voluptates ab nisi quas animi magnam quae ut maxime!
+                  Dolore incidunt rerum asperiores, illo nulla inventore tempora accusamus, omnis enim beatae cumque. Corporis rerum quas, delectus incidunt aut, numquam, temporibus facilis autem natus similique ducimus rem eius praesentium dicta.
+                  Placeat numquam ullam, maxime accusamus, voluptatibus aperiam temporibus culpa praesentium officia magnam a libero molestiae tempore ducimus illum excepturi consequatur quasi quas reprehenderit ratione voluptates voluptatem. Odio temporibus reprehenderit tenetur!
+                  Porro dolorem provident ad corporis. Excepturi, odio aliquam nemo adipisci placeat praesentium quisquam nihil dolor. Quia iusto laboriosam nemo. Dicta temporibus reprehenderit, quasi dignissimos recusandae eaque corporis fuga nostrum esse?
+                  Quam odit laborum corrupti iusto delectus ipsum maxime unde, porro ab distinctio, nisi dicta provident dignissimos fugiat at expedita. Quas, maxime aliquam. Cumque corporis asperiores quisquam atque temporibus, quam porro?
+                  Soluta error ad blanditiis aut sed laboriosam nobis molestias omnis commodi ab, praesentium quaerat iusto voluptatum magnam nesciunt voluptatibus itaque suscipit cum animi delectus laudantium, illo corrupti debitis. Velit, magni.
+                  Maiores excepturi aliquam, adipisci facere ex quis, nobis sapiente vero corrupti ad illo ducimus consectetur facilis? Iusto blanditiis nobis unde qui quos suscipit. Placeat fugit reiciendis labore, alias ipsam nam.
+                  Possimus praesentium ullam dolorem consequatur quidem voluptatibus labore fugit fuga commodi consectetur unde, eligendi optio minus laudantium perspiciatis quae voluptas necessitatibus vero cupiditate. Ratione esse eos corrupti consequuntur doloribus maiores?</p>
+                </div>
+               <div class="btn">
+                <p>Перейти к рецепту</p>
+               </div>
+              </div>
+              <div class="page">
+                <p>book</p>
+               
+              </div>
+              <div class="page">
+                <p>book</p>
+                
+              </div>
+              <div class="page">
+                <p>book</p>
+                
+              </div>
+              <div class="page">
+                <p>book</p>
+                
+              </div>
+              <div class="page hard">
+              
+              </div>
+              <div class="page last-page hard"></div>
+            </div>
+            
+          </div>
+            
+      </div>
+      
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.topology.min.js"></script>
+
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="turnjs4/lib/turn.js"></script>
+
 <script>
-VANTA.TOPOLOGY({
-  el: ".wrapper",
-  mouseControls: false,
-  touchControls: false,
-  gyroControls: false,
-  minHeight: 200.00,
-  minWidth: 200.00,
-  scale: 1.00,
-  scaleMobile: 1.00,
-  color: 0xb67c3f,
-  backgroundColor:0x4d1900
+  let pageMaker = (pages) => {
+  for(let i = 0;i < pages.length;i++){
+    if(i % 2 != 0){
+      pages[i].style.borderRadius = '20px 0 0 20px'
+      
+      if(i != 0 && i != pages.length-1){
+        pages[i].style.background = '#fdd4a2'
+        pages[i].insertAdjacentHTML('beforeend','<div class="back" onclick="back()"></div>')
+        pages[i].insertAdjacentHTML('beforeend',`<p class="numL">${i}</p>`)
+      }
+    }
+    else if(i != 0 && i != pages.length-1){
+      pages[i].style.borderRadius = '0 20px 20px 0'
+      pages[i].insertAdjacentHTML('beforeend','<div class="next" onclick="next()"></div>')
+      pages[i].insertAdjacentHTML('beforeend',`<p class="numR">${i}</p>`)
+    }
+  }
+}
+pageMaker(document.querySelectorAll('.page'))
+
+
+
+let widthL = +window.getComputedStyle(document.querySelector('.bookzone')).width.slice(0, -2) * 0.85 ;
+let heightL = +window.getComputedStyle(document.querySelector('.bookzone')).height.slice(0, -2) * 0.85;
+
+$("#flipbook").turn({
+  width: widthL,
+  height: heightL,
+  autoCenter: true
+});
+let numPage;
+$("#flipbook").bind("turning", function(event, page, view) {
+return numPage=page;
 });
 
-let widthL = +window.getComputedStyle(document.querySelector('.bookzone')).width.slice(0, -2) * 0.7 ;
-  let heightL = +window.getComputedStyle(document.querySelector('.bookzone')).height.slice(0, -2) * 0.85;
-  $("#flipbook").turn({
-    width: widthL,
-    height: heightL,
-    autoCenter: true
-  });
+
+
+let next = () => { $("#flipbook").turn('next')}
+
+let back = () => {
+  $("#flipbook").turn('page',numPage-1);
+  return numPage--;
+}
 </script>
 
 </body>

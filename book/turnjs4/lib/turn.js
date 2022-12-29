@@ -549,6 +549,7 @@ turnMethods = {
         flip({
           page: page,
           next: (odd || single) ? page+1 : page-1,
+          
           turn: this
         }).
         flip('disable', data.disabled);
