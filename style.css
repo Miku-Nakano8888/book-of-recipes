@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+*{
+    font-family: 'Russo One';
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: rgb(22, 22, 22);
+    overflow: hidden;
+
+}
+.left-panel{
+    margin-left: 0.8%;
+    height: 97%;
+    width: 20.7%;
+    background: rgba(145,93,50, 0.45);
+    border-radius: 6px;
+    position: absolute;            
+   top: 50%;                        
+   transform: translate(0, -50%)
+
+}
+.a-panel-in-left-panel{
+    opacity: 0.55;
+    margin: 0 auto;
+    margin-top:  7px;
+    height: 35%;
+    width: 95%;
+    background: #C7976C;
+    border-radius: 10px;
+}
+
+.b-panel-in-left-panel{
+    opacity: 0.55;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top:  7px;
+    height: 10%;
+    width: 95%;
+    background: #C7976C;
+    border-radius: 10px;
+    transition: 1s;
+}
+.b-panel-in-left-panel:hover{
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top:  7px;
+    height: 10%;
+    width: 95%;
+    background: #C7976C;
+    border-radius: 10px;
+    transition: 1s;
+}
+.c-panel-in-left-panel{
+    opacity: 0.55;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top:  7px;
+    height: 10%;
+    width: 95%;
+    background: #C7976C;
+    border-radius: 10px;
+    transition: 1s;
+}
+.c-panel-in-left-panel:hover{
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top:  7px;
+    height: 10%;
+    width: 95%;
+    background: #C7976C;
+    border-radius: 10px;
+    transition: 1s;
+}
+.d-panel-in-left-panel{
+    opacity: 0.55;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top:  7px;
+    height: 10%;
+    width: 95%;
+    background: #C7976C;
+    border-radius: 10px;
+    transition: 1s;
+
+}
+.d-panel-in-left-panel:hover{
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top:  7px;
+    height: 10%;
+    width: 95%;
+    background: #C7976C;
+    border-radius: 10px;
+    transition: 1s;
+
+}
+.avatar{
+    transform: translate(0px,10px);
+    height: 96px;
+    width: 96px;
+    border-radius: 100%;
+    
+    border: 1px solid black;
+}
+.under-the-text{
+    margin-top: -15px;
+}
+.text{
+    width: 100%;
+    margin-top: 25px;
+}
+.ava{
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+}
+
+.block-with-avatar{
+    height: 100%;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+}
+.fon{
+    height: 100%;
+    width: 100%;
+    opacity: 0.45;
+}
+.right-panel1{
+    display: block;
+    margin-left: 22.7%;
+    height: 97%;
+    width: 76.5%;
+    background: rgba(145,93,50, 0.45);
+    border-radius: 6px;
+    position: absolute;            
+    top: 50%;                        
+    transform: translate(0, -50%)
+}
+.right-panel2{
+    
+    display: none;
+    margin-left: 22.7%;
+    height: 97%;
+    width: 76.5%;
+    background: rgba(145,93,50, 0.45);
+    border-radius: 6px;
+    position: absolute;            
+    top: 50%;                        
+    transform: translate(0, -50%)
+}
+.right-panel3{
+    display: none;
+    margin-left: 22.7%;
+    height: 97%;
+    width: 76.5%;
+    background: green;
+    opacity: 0.45;
+    border-radius: 6px;
+    position: absolute;            
+    top: 50%;                        
+    transform: translate(0, -50%)
+}
+.blydo{
+    height: 85%;
+    width: 100%;
+}
+.add-dish{
+    position: fixed;
+    bottom: 5px;
+    margin:0 50% 0 50%;
+    height: 40px;
+    width: 160px;
+    border-radius: 100% ;
+    border-radius: 50px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.5);;
+    
+}
+.add-dish::before{
+    content: '';
+    width: 2%;
+    height: 80%;
+    background: black;
+    position: absolute;
+    top: 7.5%;
+    left: 12%;
+    
+    
+}
+.add-dish::after{
+    content: '';
+    width: 2%;
+    height: 80%;
+    background: black;
+    position: absolute;
+    top: 7.5%;
+    left: 12%;
+    transform: rotate(90deg);
+    
+}
+
