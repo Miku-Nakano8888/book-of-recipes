@@ -145,6 +145,7 @@ html, body{
 
 
 .page{
+    
     color: black;
     background: #ffd8a9;
     container-type: inline-size;  
@@ -279,4 +280,17 @@ html, body{
     position: absolute;
     top: 97%;
     left: 97%;
+}
+
+
+
+
+.rec{
+    width: 100%;
+    height: 7%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }

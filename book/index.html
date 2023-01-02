@@ -16,9 +16,10 @@
           <div class="search">
             <input type="text" class="inpSearch" placeholder="Найди любимое блюдо">
             <div class="placeOfRec">
-              <div class="searchBtn">
+              <div class="searchBtn" onclick="searchFn()">
                 <p>Поиск</p>
               </div>
+              
               <div class="recepts"></div>
             </div>
           </div>
@@ -27,53 +28,7 @@
           <div class="bookzone">
 
             <div id="flipbook">
-              <div class="page first-page hard">
-                
-              </div>
-              <div class="page hard">
-                <h2>Огурец</h2>
-                <div class="blockW">
-                  <div class="img"></div>
-                  <div class="ing">
-                    <p>
-                      jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjf hello i am pidor obosanyu
-                    </p>
-                  </div>
-                </div>
-                <div class="op">
-                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor numquam eum libero natus qui porro consequuntur quo autem explicabo aspernatur quisquam, voluptates ab nisi quas animi magnam quae ut maxime!
-                  Dolore incidunt rerum asperiores, illo nulla inventore tempora accusamus, omnis enim beatae cumque. Corporis rerum quas, delectus incidunt aut, numquam, temporibus facilis autem natus similique ducimus rem eius praesentium dicta.
-                  Placeat numquam ullam, maxime accusamus, voluptatibus aperiam temporibus culpa praesentium officia magnam a libero molestiae tempore ducimus illum excepturi consequatur quasi quas reprehenderit ratione voluptates voluptatem. Odio temporibus reprehenderit tenetur!
-                  Porro dolorem provident ad corporis. Excepturi, odio aliquam nemo adipisci placeat praesentium quisquam nihil dolor. Quia iusto laboriosam nemo. Dicta temporibus reprehenderit, quasi dignissimos recusandae eaque corporis fuga nostrum esse?
-                  Quam odit laborum corrupti iusto delectus ipsum maxime unde, porro ab distinctio, nisi dicta provident dignissimos fugiat at expedita. Quas, maxime aliquam. Cumque corporis asperiores quisquam atque temporibus, quam porro?
-                  Soluta error ad blanditiis aut sed laboriosam nobis molestias omnis commodi ab, praesentium quaerat iusto voluptatum magnam nesciunt voluptatibus itaque suscipit cum animi delectus laudantium, illo corrupti debitis. Velit, magni.
-                  Maiores excepturi aliquam, adipisci facere ex quis, nobis sapiente vero corrupti ad illo ducimus consectetur facilis? Iusto blanditiis nobis unde qui quos suscipit. Placeat fugit reiciendis labore, alias ipsam nam.
-                  Possimus praesentium ullam dolorem consequatur quidem voluptatibus labore fugit fuga commodi consectetur unde, eligendi optio minus laudantium perspiciatis quae voluptas necessitatibus vero cupiditate. Ratione esse eos corrupti consequuntur doloribus maiores?</p>
-                </div>
-               <div class="btn">
-                <p>Перейти к рецепту</p>
-               </div>
-              </div>
-              <div class="page">
-                <p>book</p>
-               
-              </div>
-              <div class="page">
-                <p>book</p>
-                
-              </div>
-              <div class="page">
-                <p>book</p>
-                
-              </div>
-              <div class="page">
-                <p>book</p>
-                
-              </div>
-              <div class="page hard">
-              
-              </div>
-              <div class="page last-page hard"></div>
+             
             </div>
             
           </div>
@@ -88,7 +43,117 @@
 <script src="turnjs4/lib/turn.js"></script>
 
 <script>
-  let pageMaker = (pages) => {
+
+let ourBase = {
+    "0912-23":{
+        "dishes":{
+            "fish":{
+                "name": "fish1",
+                "ing":"mooka flover opopo",
+                "op":'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed culpa distinctio rerum voluptates ipsam, quas, dolor illum minima unde tempore ab fuga animi. Error natus unde incidunt nostrum placeat expedita?Quaerat veniam delectus natus a accusantium rerum aliquam, quos corrupti nihil fugit quidem, distinctio libero harum exercitationem impedit beatae unde quas iste, veritatis rem. Nisi accusantium iusto consequuntur iste ipsam?Ipsam vel nam consequatur excepturi necessitatibus, totam earum ullam, laborum, maxime molestias aspernatur culpa. Quibusdam, ducimus! Quasi, animi! Laudantium incidunt fuga unde ipsam quaerat nisi similique veniam totam alias animi?'
+            },
+            "rr":{
+                "name": "fish2",
+                "ing":"mooka flover opopo",
+                "op":"asldkjalsjdalsdjalksjdaksdjladjlskdjksjdld"
+            },
+            "op":{
+                "name": "fish3",
+                "ing":"mooka flover opopo",
+                "op":"asldkjalsjdalsdjalksjdaksdjladjlskdjksjdld"
+            }
+        }
+    },
+    "0912-24":{
+        "dishes":{
+            "fish":{
+                "name": "fish7",
+                "ing":"mooka flover opopo",
+                "op":"asldkjalsjdalsdjalksjdaksdjladjlskdjksjdld"
+            }
+        }
+    },
+    "0912-":{
+        "dishes":{
+           
+            "op":{
+                "name": "fish8",
+                "ing":"mooka flover opopo",
+                "op":"asldkjalsjdalsdjalksjdaksdjladjlskdjksjdld"
+            }
+        }
+    },
+    "0912-939393":{
+        "dishes":{
+            "fish":{
+                "name": "fish5",
+                "ing":"mooka flover opopo",
+                "op":"asldkjalsjdalsdjalksjdaksdjladjlskdjksjdld"
+            },
+            "rr":{
+                "name": "fish3",
+                "ing":"mooka flover opopo",
+                "op":"asldkjalsjdalsdjalksjdaksdjladjlskdjksjdld"
+            },
+            "op":{
+                "name": "fish8",
+                "ing":"mooka flover opopo",
+                "op":"asldkjalsjdalsdjalksjdaksdjladjlskdjksjdld"
+            },
+            "oIp":{
+                "name": "fishiiii8",
+                "ing":"mooka floveseerr opopo",
+                "op":"asldkjalsjdalersdjalksjdaksdjladjlskdjksjdld"
+            }
+        }
+    }
+}
+
+
+let makePages = () => {
+  
+  document.querySelector('#flipbook').insertAdjacentHTML('beforeend',`<div class ="page first-page hard"></div>`)
+    let keys = Object.keys(ourBase);
+    keys.forEach((el,i) =>{
+      
+        let dish = Object.keys(ourBase[el].dishes);
+        
+        dish.forEach((dis,i) => {
+          
+           document.querySelector('#flipbook').insertAdjacentHTML('beforeend',`
+           <div class="page">
+                <h2>${ourBase[el].dishes[dis].name}</h2>
+                <div class="blockW">
+                  <div class="img"></div>
+                  <div class="ing">
+                    <p>
+                    ${ourBase[el].dishes[dis].ing}
+                    </p>
+                  </div>
+                </div>
+                <div class="op">
+                  <p>${ourBase[el].dishes[dis].op}</p>
+                </div>
+               <div class="btn">
+                <p>Перейти к рецепту</p>
+               </div>
+              </div>
+           `)
+        })
+    })
+
+    if(document.querySelectorAll('.page').length % 2 == 0){
+      document.querySelector('#flipbook').insertAdjacentHTML('beforeend',`<div class ="page  hard"></div>`)
+    }
+    document.querySelector('#flipbook').insertAdjacentHTML('beforeend',`<div class ="page last-page hard"></div>`)
+    let ppp = document.querySelectorAll('.page');
+    ppp[1].classList.add('hard')
+}
+
+makePages();
+
+  let pageEdit = (pages) => {
+
   for(let i = 0;i < pages.length;i++){
     if(i % 2 != 0){
       pages[i].style.borderRadius = '20px 0 0 20px'
@@ -104,9 +169,12 @@
       pages[i].insertAdjacentHTML('beforeend','<div class="next" onclick="next()"></div>')
       pages[i].insertAdjacentHTML('beforeend',`<p class="numR">${i}</p>`)
     }
+    else if(i != pages.length-1){
+      pages[i].style.borderRadius = '0 20px 20px 0'
+    }
   }
 }
-pageMaker(document.querySelectorAll('.page'))
+pageEdit(document.querySelectorAll('.page'))
 
 
 
@@ -118,7 +186,7 @@ $("#flipbook").turn({
   height: heightL,
   autoCenter: true
 });
-let numPage;
+let numPage = 1;
 $("#flipbook").bind("turning", function(event, page, view) {
 return numPage=page;
 });
@@ -131,6 +199,80 @@ let back = () => {
   $("#flipbook").turn('page',numPage-1);
   return numPage--;
 }
+
+
+let searchFn = () => {
+  let recepsSearch = document.querySelectorAll('.rec');
+  recepsSearch.forEach(el => el.remove());
+  let allR = [];
+   Object.keys(ourBase).forEach((el,i) =>{
+         Object.keys(ourBase[el].dishes).forEach((dis,i) => {
+          allR.push(ourBase[el].dishes[dis].name)
+        })
+    })
+    let req = document.querySelector('.inpSearch').value;
+    
+      let answ = [];
+      
+      allR.forEach((rec,j) => {
+        
+        for(let i =0;i < rec.length;i++){
+          if(rec[i] == req[0]){
+            
+            for(let z = i; z < i+req.length;z++){
+
+              if(rec[z] != req[z]){
+                
+                break;
+              }
+              else if(z == i+req.length-1){
+                
+                answ.push(rec);
+              }
+            }
+          }
+        }
+      })
+    
+   answ.forEach((el,i)=>{
+    document.querySelector('.recepts').insertAdjacentHTML('beforeend',`<div class="rec" onclick = "recPer(${i})"><p>${el}</p></div>`)
+   })
+}
+
+let recPer = (i) =>{
+  
+  if(numPage < i+2){
+    let r = numPage+1;
+    let time = setInterval(()=>{
+      if(r < i+3){
+        
+        $("#flipbook").turn('page',r)
+        r++;
+      }
+      else{
+        
+        clearInterval(time);
+      }
+    },150)
+  }
+  else{
+    let r = numPage-1;
+    let time = setInterval(()=>{
+      if(r > i+1){
+        
+        $("#flipbook").turn('page',r)
+        r--;
+      }
+      else{
+        
+        clearInterval(time);
+      }
+    },150)
+  }
+  return numPage = i+2;
+}
+
+
 </script>
 
 </body>

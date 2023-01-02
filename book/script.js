@@ -1,9 +1,23 @@
 
 // работа с JSON 
 const Jsoning = require('jsoning');
-let database = {
-    base: new Jsoning('database.json')
-};
-database.base.clear()
-let a = database.base.all();
-console.log(a);
+let database = new Jsoning('database.json');
+//  database = new Jsoning('../database.json');
+
+let a = {
+    dishes:{
+        pon:{
+            name:'porn'
+        }
+    },
+    id:09090
+}
+
+database.set("foo", "bar");
+database.set("hi", 3);
+database.set("en", "db"); // { "en": "db    
+database.set("en", "en"); // { "en": "en" }
+
+
+
+
