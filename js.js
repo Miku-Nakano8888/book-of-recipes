@@ -99,11 +99,11 @@ hum.forEach(el => {
     })
   })
 })
-
+let recArr =  document.querySelectorAll('.rec');
 let deleteFn = (a) =>{
   let base = Object.keys(ourBase['091223'].dishes)
   delete ourBase['091223'].dishes[base[a]];
-  document.querySelectorAll('.rec')[a].remove();
+ recArr[a].remove();
 }
 
 
